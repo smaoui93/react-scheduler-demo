@@ -33,6 +33,8 @@ class App extends Component {
         const text = ev && ev.text ? ` (${ev.text})` : '';
         const message = `event ${action}: ${id} ${text}`;
         this.addMessage(message);
+        console.log("im in logo data update-action",action);
+        console.log("im in logo dataupdate-ev",ev)
     }
 
     handleTimeFormatStateChange = (state) => {
@@ -58,9 +60,9 @@ class App extends Component {
                         onDataUpdated={this.logDataUpdate}
                     />
                 </div>
-                <MessageArea
+                {/* <MessageArea
                     messages={messages}
-                />
+                /> */}
             </div>
         );
     }
